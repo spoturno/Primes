@@ -1,12 +1,12 @@
 # Primes
-The goal of this project is to work with discreet math algorithms such as: primality tests, prime factorization, Greatest common divisor, Prime-generating, Prime-counting, and more. Also this will work as a library for other projects.
+The goal of this project is to work with discreet math algorithms such as: primality tests, prime factorization, The Greatest common divisor, Prime-generating, Prime-counting, and more. Also, this will work as a library for other projects.
 
 ## Modules
 (TODO)
 
 ## Prerequisites
 - Basic math
-- dicreet math knowledge
+- Discreet math knowledge
 
 ## Contribute
 Have you spotted a typo, would you like to fix a link, or is there something you’d like to suggest? Be welcome to open a pull request!
