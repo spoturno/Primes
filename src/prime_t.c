@@ -8,6 +8,8 @@
 
 #include <stdio.h>
 #include <stdbool.h>
+#include <time.h>
+#include <stdlib.h>
 #include "../include/prime_t.h"
 
 bool isPrime_1(nat n){
@@ -21,6 +23,22 @@ bool isPrime_1(nat n){
     }
     return true;
 }
+
+nat generatePrime(){
+    srand(time(NULL));
+    nat r = rand();
+    while(!isPrime_1(r)){
+        r = r + 1;
+        //interval checking (TODO)
+    }
+    return r;
+}
+
+bool isPrime_2(nat n, nat k){
+
+    return true;
+}
+
 
 
 
