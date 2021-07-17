@@ -4,6 +4,12 @@
 
 int countPrimes_1(){
     int a, b, i, j, flag;
+    //ask the user the inteval [a, b]
+    printf("Insert interval [a, b]\n");
+    printf("Insert a");
+    scanf("%d", &a);
+    printf("Insert b");
+    scanf("%d", &b);
     for (i = a; i <= b; i++){
         if(i == 1  || i == 0)
             continue;
