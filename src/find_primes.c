@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int countPrimes_1(){
+void countPrimes_1(){
     int a, b, i, j, flag;
     //ask the user the inteval [a, b]
     printf("Insert interval [a, b]\n");
