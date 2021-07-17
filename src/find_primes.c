@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
@@ -7,16 +8,14 @@ int countPrimes_1(){
         if(i == 1  || i == 0)
             continue;
         flag = 1;
-        for(j = 2; j <= i / 2; ++){
+        for(j = 2; j <= i / 2; ++i){
             if(i % j == 0){
                 flag = 0;
-                brak;
+                break;
             }
         }
         if(flag == 1)
             printf("%d", i);
-            
-
     }
     return 0;
 }
