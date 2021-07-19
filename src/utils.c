@@ -31,6 +31,21 @@ void primeFactorization(int num){
     
 }
 
+int gcdExtended(int a, int b, int &x, int &y){
+    if(b == 0){
+        x = 1;
+        y = 0;
+        return a;
+    } else{
+        int g = gcdExtended(b, a % b, x, y);
+        int x1 = x, y1 = y;
+        x = y1;
+        y = x1 - (a / b) * y1;
+        return g;
+    }
+}
+
+
 void diophantineSolution(int a, int b, int c){
     //replace with isDivisible()
     if(c % gcd(a, b) != 0)
@@ -39,5 +54,7 @@ void diophantineSolution(int a, int b, int c){
         // find the solution
         // print all the classes [1], [2], [k] 
     }
-
 }
+
+
+
