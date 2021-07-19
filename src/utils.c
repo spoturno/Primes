@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <math.h>
+#include "../include/utils.h"
+#include "../include/gcd.h"
 
 //change int to nat
 void primeFactorization(int num){
@@ -27,4 +29,15 @@ void primeFactorization(int num){
     if (num > 2)
         printf("%d", num);
     
+}
+
+void diophantineSolution(int a, int b, int c){
+    //replace with isDivisible()
+    if(c % gcd(a, b) != 0)
+        printf("NO SOLUTION");
+    else {
+        // find the solution
+        // print all the classes [1], [2], [k] 
+    }
+
 }
