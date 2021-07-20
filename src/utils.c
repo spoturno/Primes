@@ -31,18 +31,18 @@ void primeFactorization(int num){
     
 }
 
-int gcdExtended(int a, int b, int &x, int &y){
+int gcdExtended(int a, int b, int *x, int *y){
     if(b == 0){
-        x = 1;
-        y = 0;
+        *x = 1;
+        *y = 0;
         return a;
-    } else{
-        int g = gcdExtended(b, a % b, x, y);
-        int x1 = x, y1 = y;
-        x = y1;
-        y = x1 - (a / b) * y1;
+    } 
+    int x1, y1;
+    int g = gcdExtended(b % a, a, &x1, &y1);
+    *x = y1 - (b/a) * x1; 
+    *y = x1;;
+
         return g;
-    }
 }
 
 

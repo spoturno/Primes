@@ -24,7 +24,7 @@ void diophantineSolution(int a, int b, int c);
  * function to implement the extended euclid algorithm
  * to find solution of diophantine equation
  */
-int gcdExtended(int a, int b, int &x, int &y);
+int gcdExtended(int a, int b, int *x, int *y);
 
 
 #endif
