@@ -32,9 +32,9 @@ void primeFactorization(int num){
 }
 
 int gcdExtended(int a, int b, int *x, int *y){
-    if(b == 0){
-        *x = 1;
-        *y = 0;
+    if(a == 0){
+        *x = 0;
+        *y = 1;
         return a;
     } 
     int x1, y1;
