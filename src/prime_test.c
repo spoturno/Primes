@@ -1,5 +1,5 @@
  /*************************************************
- * Filename: prime_t.c
+ * Filename: prime_test.c
  * Author: Tomas Spoturno
  * Copyright: 
  * Disclaimer: This code is presented "as is" without any guarantees.
@@ -30,12 +30,12 @@ bool isPrime_2(int n){
     //read from primes plain text
     FILE *primes_file;
     primes_file = fopen("./primes_t", "r");
-        //compare each prime to n until n.
-        int temp;
-        while(fscanf(primes_file, " %d", &temp) == 1){
-            if(temp == n)
-                return true;
-        }
+    //compare each prime to n until n.
+    int *temp = malloc(sizeof(int)); 
+    while(fscanf(primes_file, "%d", temp) == 1){
+        if(*temp == n)
+            return true;
+    }
     fclose(primes_file);
     return false;
 }
