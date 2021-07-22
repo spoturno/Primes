@@ -6,15 +6,16 @@
 #include "include/prime_test.h"
 
 int main(void){
-    //test with isPrime_1
+ ;   //test with isPrime_1
     clock_t begin = clock();
-    nat n;
+    nat n; int p;
     printf("Insert Number:");
     scanf("%u", &n);
     (isPrime_1(n) ? printf("%u is prime\n", n) : printf("%u is NOT prime\n", n));
     clock_t end = clock();
     double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
     printf("exec-time: %f sec\n", time_spent);
-    (isPrime_2(n) ? printf("%u is prime\n", n) : printf("%u is NOT prime\n", n));
+    scanf("%d", &p);
+    (isPrime_2(p) ? printf("%u is prime\n", n) : printf("%u is NOT prime\n", n));
     return 0;
 }

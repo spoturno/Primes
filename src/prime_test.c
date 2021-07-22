@@ -24,14 +24,16 @@ bool isPrime_1(nat n){
     return true;
 }
 
-bool isPrime_2(nat n){
+//change to nat (TODO)
+////change to nat (TODO)
+bool isPrime_2(int n){
     //read from primes plain text
     FILE *primes_file;
-    primes_file = fopen("./primes", "r");
+    primes_file = fopen("./primes_t", "r");
     for(int i = 0; i < n; i++){
         //compare each prime to n until n.
         int temp;
-        fscanf(primes_file, "%d ", &temp);
+        fscanf(primes_file, "%d", &temp);
         if(temp == n)
             return true;
     }
