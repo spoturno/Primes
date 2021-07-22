@@ -3,7 +3,7 @@
 #include <time.h>
 #include <math.h>
 
-#include "include/prime_t.h"
+#include "include/prime_test.h"
 
 int main(void){
     //test with isPrime_1
@@ -15,5 +15,6 @@ int main(void){
     clock_t end = clock();
     double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
     printf("exec-time: %f sec\n", time_spent);
+    (isPrime_2(n) ? printf("%u is prime\n", n) : printf("%u is NOT prime\n", n));
     return 0;
 }

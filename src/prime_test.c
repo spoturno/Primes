@@ -10,7 +10,7 @@
 #include <stdbool.h>
 #include <time.h>
 #include <stdlib.h>
-#include "../include/prime_t.h"
+#include "../include/prime_test.h"
 
 bool isPrime_1(nat n){
     if(n == 2 || n == 3)
