@@ -24,6 +24,21 @@ bool isPrime_1(nat n){
     return true;
 }
 
+bool isPrime_2(nat n){
+    //read from primes plain text
+    FILE *primes_file;
+    primes_file = fopen("./primes", "r");
+    for(int i = 0; i < n; i++){
+        //compare each prime to n until n.
+        int temp;
+        fscanf(primes_file, "%d ", &temp);
+        if(temp == n)
+            return true;
+    }
+    return false;
+
+}
+
 nat generatePrime(){
     srand(time(NULL));
     nat r = rand();
