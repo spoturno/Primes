@@ -35,8 +35,8 @@ bool isPrime_2(nat n){
         if(temp == n)
             return true;
     }
+    fclose(primes_file);
     return false;
-
 }
 
 nat generatePrime(){
@@ -47,11 +47,6 @@ nat generatePrime(){
         //interval checking (TODO)
     }
     return r;
-}
-
-bool isPrime_2(nat n, nat k){
-
-    return true;
 }
 
 
