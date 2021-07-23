@@ -30,3 +30,4 @@ Have you spotted a typo, would you like to fix a link, or is there something you
 ## Future functionalities
 - Bash script to execute prime functions
 - Compute the algorithms in the web using web-sockets or ...
+- probabilty test of prime number inside prime_test.c

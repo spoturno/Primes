@@ -31,11 +31,14 @@ bool isPrime_2(int n){
     FILE *primes_file;
     primes_file = fopen("./primes_t", "r");
     //compare each prime to n until n.
-    int *temp = malloc(sizeof(int)); 
+    int *temp = (int *)malloc(sizeof(int)); 
     while(fscanf(primes_file, "%d", temp) == 1){
-        if(*temp == n)
-            return true;
+        if(temp != NULL){
+            if(*temp == n)
+                return true;
+        }
     }
+    free(temp);
     fclose(primes_file);
     return false;
 }
