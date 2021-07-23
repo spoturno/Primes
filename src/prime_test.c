@@ -43,6 +43,24 @@ bool isPrime_2(int n){
     return false;
 }
 
+
+// same as isPrime_2 for testing if static memory works
+bool isPrime_3(int n){
+    //read from primes plain text
+    FILE *primes_file;
+    primes_file = fopen("./primes_t.txt", "r");
+    //compare each prime to n until n.
+    if(primes_file == NULL)
+        printf("Can't open file for reading! \n");
+    else{
+        int temp;
+        fscanf(primes_file, "%d", &temp);
+        printf("1st Number: %d", temp);
+    }
+    fclose(primes_file);
+    return false;
+}
+
 nat generatePrime(){
     srand(time(NULL));
     nat r = rand();
