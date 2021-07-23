@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <time.h>
+#include <string.h>
 #include <stdlib.h>
 #include "../include/prime_test.h"
 
@@ -47,17 +48,18 @@ bool isPrime_2(int n){
 // same as isPrime_2 for testing if static memory works
 bool isPrime_3(int n){
     //read from primes plain text
-    FILE *primes_file;
-    primes_file = fopen("./primes_t.txt", "r");
-    //compare each prime to n until n.
-    if(primes_file == NULL)
-        printf("Can't open file for reading! \n");
+    char * f = "primes_t.txt";
+    FILE * pf = fopen(f, "r");
+    if (pf == NULL){
+        fprintf(stderr, "Couldn't open %s\n", f);
+        exit(1);
+    }
     else{
         int temp;
-        fscanf(primes_file, "%d", &temp);
-        printf("1st Number: %d", temp);
+        fscanf(pf, "%d", &temp);
+        printf("%d", temp);
     }
-    fclose(primes_file);
+    fclose(pf);
     return false;
 }
 
