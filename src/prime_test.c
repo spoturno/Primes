@@ -12,6 +12,10 @@
 #include <string.h>
 #include <stdlib.h>
 #include "../include/prime_test.h"
+#include "../include/prime_list.h"
+
+//export to other modules (TODO)
+int primes[] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53};
 
 bool isPrime_1(nat n){
     if(n == 2 || n == 3)
@@ -45,21 +49,12 @@ bool isPrime_2(int n){
 }
 
 
-// same as isPrime_2 for testing if static memory works
+// same as isPrime_2 for testing with internal array
 bool isPrime_3(int n){
-    //read from primes plain text
-    char * f = "primes_t.txt";
-    FILE * pf = fopen(f, "r");
-    if (pf == NULL){
-        fprintf(stderr, "Couldn't open %s\n", f);
-        exit(1);
+    for(int i = 0; i < sizeof(primes); i++){
+        if(n == primes[i])
+            return true;
     }
-    else{
-        int temp;
-        fscanf(pf, "%d", &temp);
-        printf("%d", temp);
-    }
-    fclose(pf);
     return false;
 }
 
