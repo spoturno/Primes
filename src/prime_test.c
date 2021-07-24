@@ -78,16 +78,5 @@ bool isPrime_3(unsigned int n, int k){
     return true;
 }
 
-nat generatePrime(){
-    srand(time(NULL));
-    nat r = rand();
-    while(!isPrime_1(r)){
-        r = r + 1;
-        //interval checking (TODO)
-    }
-    return r;
-}
-
-
 
 

@@ -3,6 +3,8 @@
 
 #include <stdbool.h>
 
+typedef unsigned int nat;
+
 /*
  * returns the prime factorization of num
  * example->    num: 2 2 3 7 
@@ -33,5 +35,8 @@ int gcdExtended(int a, int b, int *x, int *y);
 //function required to fermat's theorem
 int power(int a, unsigned int n, int p);
 
+
+//generate random prime number (TODO)
+nat generatePrime();
 
 #endif

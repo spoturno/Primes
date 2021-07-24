@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <math.h>
+#include <time.h>
 #include "../include/utils.h"
+#include "../include/prime_test.h"
 
 //change int to nat
 void primeFactorization(int num){
@@ -76,3 +78,7 @@ int gcd(int a, int b){
     return gcd(b, a % b);
 }
 
+nat generatePrime(){
+    //(TODO)
+    return 1;
+}
