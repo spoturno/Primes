@@ -14,7 +14,7 @@
 #include <errno.h>
 #include "../include/prime_test.h"
 #include "../include/prime_list.h"
-#include "../include/gcd.h"
+#include "../include/utils.h"
 
 //export to other modules (TODO)
 int primes[] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53};
@@ -58,7 +58,7 @@ bool isPrime_2(int n){
 }
 
 
-// Fermat Method
+//Fermat Method
 bool isPrime_3(int n){
 
     return false;
