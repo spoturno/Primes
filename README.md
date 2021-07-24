@@ -26,6 +26,9 @@ Have you spotted a typo, would you like to fix a link, or is there something you
 - [Factorization](https://en.wikipedia.org/wiki/Integer_factorization)
 - [Prime counting](https://en.wikipedia.org/wiki/Prime-counting_function)
 - [Primes data](https://primes.utm.edu/primes/)
+- [Fermat Method](https://en.wikipedia.org/wiki/Fermat_primality_test)
+- [Miller-Rabin Test](https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test)
+- [Solovay-Strassen Test](https://en.wikipedia.org/wiki/Solovay%E2%80%93Strassen_primality_test) 
 
 ## Future functionalities
 - Bash script to execute prime functions
