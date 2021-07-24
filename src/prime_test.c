@@ -30,21 +30,26 @@ bool isPrime_1(nat n){
 }
 
 //change to nat (TODO)
-////change to nat (TODO)
 bool isPrime_2(int n){
-    //read from primes plain text
-    FILE *primes_file;
-    primes_file = fopen("./primes_t", "r");
-    //compare each prime to n until n.
-    int *temp = (int *)malloc(sizeof(int)); 
-    while(fscanf(primes_file, "%d", temp) == 1){
-        if(temp != NULL){
-            if(*temp == n)
-                return true;
-        }
+    FILE *pf;
+    pf = fopen("primes", "r");
+
+    //read file into array
+    int array_primes[1000], i;
+
+    if(pf == NULL){
+        printf("Error Reading File\n");
+        exit(0);
     }
-    free(temp);
-    fclose(primes_file);
+    for(i = 0; i < 1000; i++){
+        fscanf(pf, "%d,", &array_primes[i]);
+    }
+    for(i = 0; i < 1000; i++){
+        if(n == array_primes[i])
+            return true;
+        else if(array_primes[i] > n)
+            break;
+    }
     return false;
 }
 

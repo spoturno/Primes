@@ -16,6 +16,6 @@ int main(void){
     double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
     printf("exec-time: %f sec\n", time_spent);
     scanf("%d", &p);
-    (isPrime_3(p) ? printf("%d is prime\n", p) : printf("%d is NOT prime\n", p));
+    (isPrime_2(p) ? printf("%d is prime\n", p) : printf("%d is NOT prime\n", p));
     return 0;
 }
