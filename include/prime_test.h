@@ -19,6 +19,6 @@ bool isPrime_2(int n);
 /*
  * This will change (TODO) 
 */
-bool isPrime_3(int n);
+bool isPrime_3(unsigned int n, int k);
 
 #endif

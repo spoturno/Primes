@@ -59,9 +59,23 @@ bool isPrime_2(int n){
 
 
 //Fermat Method
-bool isPrime_3(int n){
+//higher value of k increases probability of correct result.
+bool isPrime_3(unsigned int n, int k){
+    if(n <= 1 || n == 4) return false;
+    if(n <= 3) return true;
 
-    return false;
+    //try k times
+    while(k>0){
+        //random number in [2..n-2] && n > 4
+        int a = 2 + rand() & (n-4);
+        if(gcd(n, a) != 1)
+            return false;
+        if(power(a, n-1, n) != 1) 
+            return false;
+        k--;
+    }
+
+    return true;
 }
 
 nat generatePrime(){
