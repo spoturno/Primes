@@ -4,8 +4,6 @@ The goal of this project is to work with discreet math algorithms such as: prima
 ## Modules
 ### prime test
 This module includes all the operation related to primality tests, the goal is to test these operations with big primes numbers and compare his execution times.
-### gcd 
-This module is in charge of returning the gratest common divisor.
 ### count
 This modules includes all the operations realted to primality tests, the goal here is to test the effectiveness with big prime numbers.
 ### find primes
