@@ -11,6 +11,7 @@
 #include <time.h>
 #include <string.h>
 #include <stdlib.h>
+#include <errno.h>
 #include "../include/prime_test.h"
 #include "../include/prime_list.h"
 
@@ -32,13 +33,14 @@ bool isPrime_1(nat n){
 //change to nat (TODO)
 bool isPrime_2(int n){
     FILE *pf;
-    pf = fopen("primes", "r");
+    pf = fopen("/home/tomas/Coding/primes/src/primes.txt", "r");
 
     //read file into array
     int array_primes[1000], i;
 
     if(pf == NULL){
         printf("Error Reading File\n");
+        printf("Error %d \n", errno);
         exit(0);
     }
     for(i = 0; i < 1000; i++){
@@ -50,6 +52,7 @@ bool isPrime_2(int n){
         else if(array_primes[i] > n)
             break;
     }
+    fclose(pf);
     return false;
 }
 
