@@ -21,4 +21,12 @@ bool isPrime_2(int n);
 */
 bool isPrime_3(unsigned int n, int k);
 
+/*
+ * This fucntion is called for all k trials It returns false if n is composite
+ * and returns true if n is probably prime.
+ * d is an odd number such that d*2^r = n-1 for some r>=1
+ */
+bool isPrime_4(int d, int n);
+
+
 #endif

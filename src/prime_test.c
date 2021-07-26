@@ -74,9 +74,46 @@ bool isPrime_3(unsigned int n, int k){
             return false;
         k--;
     }
-
     return true;
 }
+
+
+
+//miller-rabin test
+bool isPrime_4(int d, int n){
+    //pick a random number [2..n-2];
+    //making sure that n > 4
+    int a = 2 + rand() % (n-4);
+
+    //compute a^d % n
+    int x = power(a, d, n);
+
+    if(x == 1 || x == n-1)
+        return true;
+
+    //keep squaring x
+    while(d != n-1){
+        x = (x*x) % n;
+        d*=2;
+        if(x == 1) return false;
+        if(x == n-1) return true;
+    }
+
+    return false;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
