@@ -95,3 +95,15 @@ void decToBinary(int n){
         printf("%d", binaryNum[j]);
     }
 }
+
+// n=32 -> 00000000000000000000000000100000
+void decToBinary2(int n){
+    //size of an integer is assumed 32 bits
+    for(int i=31; i >= 0; i--){
+        int k = n >> i;
+        if(k & 1)
+            printf("1");
+        else 
+            printf("0");
+    }
+}
