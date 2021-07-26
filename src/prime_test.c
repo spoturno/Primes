@@ -80,6 +80,7 @@ bool isPrime_3(unsigned int n, int k){
 
 
 //miller-rabin test
+//fing r such taht n = 2^d * r + 1 for some r>= 1
 bool isPrime_4(int d, int n){
     //pick a random number [2..n-2];
     //making sure that n > 4
