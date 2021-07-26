@@ -39,4 +39,6 @@ int power(int a, unsigned int n, int p);
 //generate random prime number (TODO)
 nat generatePrime();
 
+//converts decimal number to binary
+void decToBinary(int n);
 #endif
